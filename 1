@@ -1,0 +1,81 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    system("chcp 1251");
+    srand(time(0));
+
+    int n, m;
+    cout << "Введите количество строк и столбцов в матрице: "; cin >> n; cout << "  "; cin >> m; 
+    int** mas = new int* [n + 1];
+    for (int i = 1; i <= n; i++)
+        mas[i] = new int[m + 1];
+
+    /*cout << endl << endl << "Исходная матрица: " << endl;
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= m; j++)
+        {
+            mas[i][j] = rand() % 10;
+            cout << mas[i][j] << "   ";
+        }
+        cout << endl;
+    }
+    int i1, i2, d;
+    do
+    {
+        i1 = rand() % n + 1;
+        i2 = rand() % n + 1;
+    } while (i1 >= i2);
+    for (int j = 1; j <= m; j++)
+    {
+        d = mas[i1][j];
+        mas[i1][j] = mas[i2][j];
+        mas[i2][j] = d;
+    }
+    cout << endl << "Конечная матрица: " << endl;
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= m; j++)
+            cout << mas[i][j] << "   ";
+        cout << endl;
+    }*/
+
+    /*int X, k = 0;
+    cout << "Введите искомое число: "; cin >> X; cout << endl;
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= m; j++)
+        {
+            mas[i][j] = rand() % 10;
+            cout << mas[i][j] << "   ";
+            if (mas[i][j] == X) k++;
+        }
+        cout << endl;
+    }
+    cout << endl << k;*/
+
+    /*int* sum = new int[m + 1];
+    int s;
+    cout << endl;
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= m; j++)
+        {
+            mas[i][j] = rand() % 10;
+            cout << mas[i][j] << "   ";
+        }
+        cout << endl;
+    }
+    for (int j = 1; j <= m; j++)
+    {
+        s = 0;
+        for (int i = 1; i <= n; i++)
+            s += mas[i][j];
+        sum[j] = s;
+    }
+    cout << endl;
+    for (int i = 1; i <= m; i++)
+        cout << sum[i] << "  ";*/
+}
