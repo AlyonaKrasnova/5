@@ -1,0 +1,23 @@
+setlocale(LC_ALL, "Russian");
+system("chcp 1251");
+srand(time(0));
+
+int n, m;
+cout « "Введите количество строк и столбцов в матрице: "; cin » n; cout « " "; cin » m;
+int** mas = new int* [n + 1];
+for (int i = 1; i <= n; i++)
+mas[i] = new int[m + 1];
+
+int X, k = 0;
+cout « "Введите искомое число: "; cin » X; cout « endl;
+for (int i = 1; i <= n; i++)
+{
+for (int j = 1; j <= m; j++)
+{
+mas[i][j] = rand() % 10;
+cout « mas[i][j] « " ";
+if (mas[i][j] == X) k++;
+}
+cout « endl;
+}
+cout « endl « k;
